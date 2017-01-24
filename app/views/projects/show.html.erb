@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+<h2>TCases</h2>
+<%= render @project.t_cases %>
+
+<h2>Add a Test Case:</h2>
+<%= render 't_cases/form' %>
+
+<%= link_to 'Update', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

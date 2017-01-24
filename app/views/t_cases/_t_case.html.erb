@@ -1,0 +1,20 @@
+
+<table>
+  <tr>
+    <th>TCase_id</th>
+    <th>Title</th>
+    <th>Scenario</th>
+    <th>Status</th>
+  </tr>
+  <% @project.t_cases.each do |t_case| %>
+    <tr>
+      <td><%= t_case.t_case_id %></td>
+      <td><%= t_case.title %></td>
+      <td><%= t_case.scenario %></td>
+      <td><%= t_case.status %></td>
+      <td><%= link_to 'Remove', [t_case.project, t_case],
+                   method: :delete,
+                   data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
