@@ -24,3 +24,8 @@ production:
   <<: *default
   adapter: postgresql
   database: db/production.sqlite3
+
+staging:
+    <<: *default
+    adapter: postgresql
+    database: db/staging.sqlite3
