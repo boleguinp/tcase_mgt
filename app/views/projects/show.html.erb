@@ -8,7 +8,8 @@
   <%= @project.description %>
 </p>
 <h2>TCases</h2>
-<%= render @project.t_cases %>
+
+<%= render 't_cases/t_case' %>
 
 <h2>Add a Test Case:</h2>
 <%= render 't_cases/form' %>
