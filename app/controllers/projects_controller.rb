@@ -1,6 +1,12 @@
 class ProjectsController < ApplicationController
+  #respond_to :html, :xml, :json
   def index
     @projects = Project.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @projects }
+      format.json { render :json => @projects }
+    end
   end
   def show
     @project = Project.find(params[:id])
@@ -14,9 +20,17 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to @project
+      respond_to do |format|
+        format.html { redirect_to @project}
+        format.xml  { render :xml => @project }
+        format.json { render :json => @project }
+      end  
     else
-      render 'new'
+      respond_to do |format|
+        format.html { render 'new' }
+        format.xml  { render :xml => @project }
+        format.json { render :json => @project }
+      end
     end
   end
   def update
