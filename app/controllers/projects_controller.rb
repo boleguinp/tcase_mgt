@@ -10,6 +10,11 @@ class ProjectsController < ApplicationController
   end
   def show
     @project = Project.find(params[:id])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @project }
+      format.json { render :json => @project }
+    end
   end
   def new
     @project = Project.new
@@ -24,7 +29,7 @@ class ProjectsController < ApplicationController
         format.html { redirect_to @project}
         format.xml  { render :xml => @project }
         format.json { render :json => @project }
-      end  
+      end
     else
       respond_to do |format|
         format.html { render 'new' }
