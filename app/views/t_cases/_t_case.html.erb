@@ -12,9 +12,10 @@
       <td><%= t_case.title %></td>
       <td><%= t_case.scenario %></td>
       <td><%= t_case.status %></td>
-      <td><%= link_to 'Remove', [t_case.project, t_case],
+      <td><%= link_to 'Remove', [t_case.project,  t_case],
                    method: :delete,
                    data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
+<!-- <td><%= link_to 'Remove', [t_case.project,  t_case], -->
