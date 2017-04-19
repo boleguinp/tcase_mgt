@@ -13,6 +13,14 @@ rvm list
 # Deploying your app to heroku
 https://www.codecademy.com/articles/deploy-rails-to-heroku
 
+# Generate your rspec specs:
+rails generate rspec:integration projects
+
+Running via Spring preloader in process 58507
+      create  spec/requests/projects_spec.rb
+
+
+
 #  Web URL:
 
 https://tcasemgt.herokuapp.com/

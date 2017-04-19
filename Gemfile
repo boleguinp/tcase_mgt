@@ -55,13 +55,15 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'rspec-rails', '3.5.2'
+  gem 'factory_girl_rails', '4.8.0'
+  gem 'rails-controller-testing', '1.0.1'
+  gem 'webmock', '3.0.1'
 end
 
-group :test, :staging do
-  gem 'faker'
-  gem 'capybara'
-  gem 'guard-rspec'
-  gem 'launchy'
-end
+# group :test do
+#   gem 'faker'
+#   gem 'capybara'
+#   gem 'guard-rspec'
+#   gem 'launchy'
+# end
