@@ -19,7 +19,16 @@ RSpec.describe "Project", type: :model do
         project = Project.new(title: "Proj_", description: "Proj_Description_1")
         expect(project).to be_valid
       end
-      it "has a dependency with t_cases" do
+    end
+    context "#has_many" do
+      before(:each) do
+        # Create factory: project
+        @project = create :project
+        # Create factories: tcases
+        @tcases = create_list(:t_case, 3, project: @project)
+      end
+      it "has a many relations with t_cases" do
+        expect(@project.t_cases.size).to be_equal 3
       end
     end
 end

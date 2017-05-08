@@ -1,6 +1,6 @@
 <%= form_for([@project, @project.t_cases.build]) do |f| %>
   <p>
-    <%= f.label :t_case_id %><br>
+    <%= f.label :name, "TCase" %><br>
     <%= f.text_field :t_case_id %>
   </p>
   <p>
@@ -16,6 +16,6 @@
     <%= f.text_field :status %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit 'Create TCase' %>
   </p>
 <% end %>

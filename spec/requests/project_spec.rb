@@ -1,5 +1,4 @@
 require 'rails_helper'
-# include WebMock::API
 
 RSpec.describe "Projects", type: :request do
   describe "GET /projects" do
