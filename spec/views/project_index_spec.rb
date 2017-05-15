@@ -1,5 +1,5 @@
 require "rails_helper"
-RSpec.describe "projects/index.html.erb" do
+RSpec.describe "projects/index.html.erb" , type: :view do
       before(:each) do
         # Create factories: projects
         @projects = create_list(:project, 3)

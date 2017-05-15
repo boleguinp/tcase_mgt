@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.xml  { render :xml => @project }
       format.json { render :json => @project }
     end

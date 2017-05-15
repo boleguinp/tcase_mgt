@@ -1,4 +1,3 @@
-# spec/models/project.rb
 require 'rails_helper'
 
 RSpec.describe "Project", type: :model do
@@ -27,7 +26,7 @@ RSpec.describe "Project", type: :model do
         # Create factories: tcases
         @tcases = create_list(:t_case, 3, project: @project)
       end
-      it "has a many relations with t_cases" do
+      it "has a many relation with t_cases" do
         expect(@project.t_cases.size).to be_equal 3
       end
     end

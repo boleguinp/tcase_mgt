@@ -1,4 +1,3 @@
-# spec/models/project.rb
 require 'rails_helper'
 
 RSpec.describe "TCase", type: :model do
