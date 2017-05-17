@@ -23,12 +23,12 @@ RSpec.describe "Projects", type: :request do
       expect(response).to render_template(:new)
       expect(response.body).to include("New Project")
 
-      post "/projects", params: {project: {title: "first title",
+      post "/projects", params: {project: {title: "first title", lead: "pboleguin",
         description: "first description"}}
       expect(response).to have_http_status(302)
       expect(response).to redirect_to(assigns(:project))
       follow_redirect!
-      expect(response.body).to include("first title").and include("first description")
+      expect(response.body).to include("first title").and include("pboleguin").and include("first description")
     end
   end
   describe "DELETE /projects/:id" do

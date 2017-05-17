@@ -7,8 +7,8 @@ describe ProjectsController  , type: :controller do
       @project_factory = create_list(:project, 3)
     end
     it "assigns all projects to @projects" do
-        get :index
-        expect(assigns(:projects)).to eq(@project_factory)
+      get :index
+      expect(assigns(:projects)).to eq(@project_factory)
     end
     it "responds to html by default" do
       get :index
@@ -85,23 +85,23 @@ describe ProjectsController  , type: :controller do
   end
   describe "POST #create" do
   it "creates the Project" do
-    expect{post :create, params: {project: {title: "first title",
+    expect{post :create, params: {project: {title: "first title", lead: "pboleguin",
      description: "first description"}}}.to change(Project,:count).by(1)
   end
     it "redirects to the new project" do
-      post :create, params: {project: {title: "first title",
+      post :create, params: {project: {title: "first title", lead: "pboleguin",
         description: "first description"}}
       expect(response).to redirect_to assigns(:project)
     end
     it "responds to json format" do
       request.accept = "application/json"
-      post :create, params: {project: {title: "first title",
+      post :create, params: {project: {title: "first title", lead: "pboleguin",
         description: "first description"}}
       expect(response.content_type).to eq "application/json"
     end
     it "responds to xml format" do
       request.accept = "application/xml"
-      post :create, params: {project: {title: "first title",
+      post :create, params: {project: {title: "first title", lead: "pboleguin",
         description: "first description"}}
       expect(response.content_type).to eq "application/xml"
     end
