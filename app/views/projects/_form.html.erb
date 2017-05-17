@@ -18,7 +18,11 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
-
+  <p>
+    <%= f.collection_select :lead, Project::LEADS, :to_s, :to_s,
+         :include_blank => true
+    %>
+  </p>
   <p>
     <%= f.label :description %><br>
     <%= f.text_area :description %>

@@ -4,12 +4,14 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Project Lead</th>
     <th>Description</th>
   </tr>
 
   <% @projects.each do |project| %>
     <tr>
       <td><%= project.title %></td>
+      <td><%= project.lead %></td>
       <td><%= project.description %></td>
       <td><%= link_to 'View', project_path(project) %></td>
       <td><%= link_to 'Update', edit_project_path(project) %></td>

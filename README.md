@@ -1,5 +1,20 @@
 # README
 
+# Adding new feature "project lead"
+## Create new branch
+$ git checkout -b newfeat
+
+## Create new migration
+rails generate migration add_lead_to_project lead:string
+rake db:migrate
+
+## Update Model
+## Update Controller
+## Update View
+
+## seeds
+rake db:seed
+
 # Setting up a Rails app
 http://railsapps.github.io/installrubyonrails-mac.html
 http://guides.rubyonrails.org/getting_started.html

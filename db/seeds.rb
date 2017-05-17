@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+projects = Project.all
+projects.each do |project|
+    project.update(lead: 'pboleguin')
+end
