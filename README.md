@@ -13,10 +13,10 @@ bundle install
 * [staging](https://staging-tcasemgt.herokuapp.com/)
 
 ## Run rspec tests
-rspec spec/requests/project_spec.rb --format documentation
-rspec spec/controllers/projects_spec.rb --format documentation
-rspec spec/views/project_index_spec.rb --format documentation
-rspec spec/models/project_spec.rb --format documentation
+* rspec spec/requests/project_spec.rb --format documentation
+* rspec spec/controllers/projects_spec.rb --format documentation
+* rspec spec/views/project_index_spec.rb --format documentation
+* rspec spec/models/project_spec.rb --format documentation
 
 ## Also see:
 
@@ -25,7 +25,7 @@ rspec spec/models/project_spec.rb --format documentation
 * [http://guides.rubyonrails.org/getting_started.html]
 
 ### RVM
-* [https://rvm.io/rvm/basics
+* [https://rvm.io/rvm/basics]
 
 ### Deploying your app to heroku
 * [https://www.codecademy.com/articles/deploy-rails-to-heroku]
