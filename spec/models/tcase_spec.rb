@@ -11,12 +11,12 @@ RSpec.describe "TCase", type: :model do
         status: "status", project_id: @project.id)
         expect(tcase).to_not be_valid
       end
-      it "is invalid without a tcase_id minimum lenght of 3" do
+      it "is invalid without a tcase_id minimum length of 3" do
         tcase = TCase.new(t_case_id: "TC", title: "title", scenario: "scenario",
         status: "status", project_id: @project.id)
         expect(tcase).to_not be_valid
       end
-      it "is valid with a tcase_id minimum lenght of 3" do
+      it "is valid with a tcase_id minimum length of 3" do
         tcase = TCase.new(t_case_id: "TC1", title: "title", scenario: "scenario",
         status: "status", project_id: @project.id)
         expect(tcase).to be_valid
