@@ -18,6 +18,9 @@ bundle install
 * rspec spec/views/project_index_spec.rb --format documentation
 * rspec spec/models/project_spec.rb --format documentation
 
+## Switch Branch
+* git checkout newfeat
+
 ## Also see:
 
 ### Setting up a Rails app
